@@ -6,12 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
       background: #fff8f5;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -23,6 +33,12 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 20px;
+    }
+
+    header > div {
+      flex: 1;
+      min-width: 240px;
+      max-width: 680px;
     }
 
     header img {
@@ -37,16 +53,37 @@
     header h1 {
       font-size: 3em;
       margin: 0;
+      line-height: 1.05;
     }
 
     header p {
       font-size: 1.5em;
+      margin: 0.3em 0;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    section h2,
+    section h3,
+    section p,
+    section a {
+      text-align: left;
     }
 
     @media (max-width: 768px) {
       header {
         padding: 35px 15px;
         justify-content: center;
+      }
+
+      header > div {
+        width: 100%;
+        max-width: 100%;
       }
 
       header img {
@@ -65,11 +102,21 @@
       section {
         padding: 30px 15px;
       }
+
+      .scroll-nav {
+        margin: 20px auto;
+      }
     }
 
     @media (max-width: 480px) {
       header {
         padding: 25px 10px;
+        flex-direction: column;
+      }
+
+      header img {
+        width: 110px;
+        height: 110px;
       }
 
       header h1 {
@@ -83,10 +130,14 @@
       section {
         padding: 20px 10px;
       }
-    }
 
-    section {
-      padding: 50px 20px;
+      .scroll-nav {
+        gap: 8px;
+      }
+
+      .scroll-nav a {
+        font-size: 0.95em;
+      }
     }
 
     .details {
@@ -205,19 +256,19 @@
 
 <section id="invitation">
   <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-  <p>Tuan/Puan dijemput untuk menghadiri majlis perkahwinan Mohd Israfil Redzuan bin Mohd Rizal & Nurul Shafiqah binti Haniff yang berlangsung pada 30 August 2026 bertempat di Dewan Wisma Pertanian dan 31 August 2026 bertempat di Kota Belud.</p>
+  <p>Dengan penuh kesyukuran ke hadrat Ilahi, kami mempersilakan Dato’/Datin/Tuan/Puan/Encik/Cik seisi keluarga ke majlis perkahwinan Mohd Israfil Redzuan Bin Mohd Rizal & Nurul Shafiqah Binti Haniff yang akan berlangsung pada dan tempat seperti berikut:-</p>
 </section>
 
 <section id="details" class="details">
   <h2>Wedding Details</h2>
-  <h3>Majlis Akad Nikah dan Walimatul Urus (Majlis Sanding di tempat Pihak Perempuan)</h3>
+  <h3>Majlis Akad Nikah dan Walimatul Urus</h3>
   <p><strong>Date:</strong> 30 August 2026</p>
   <p><strong>Time:</strong> 11:00 pagi</p>
   <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@5.9568759,116.080461,17z" target="_blank">Dewan Wisma Pertanian</a></p>
-  <h3>Majlis Sanding (Pihak Lelaki)</h3>
+  <h3>Majlis Sanding</h3>
   <p><strong>Date:</strong> 31 August 2026</p>
   <p><strong>Time:</strong> 11:00 pagi</p>
-  <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@6.3552406,116.4310738,10z" target="_blank">Kota Belud</a></p>
+  <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@6.3552406,116.4310738,10z" target="_blank">Kg. Pantai Emas, Kota Belud</a></p>
 </section>
 
 <section>
