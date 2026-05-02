@@ -137,6 +137,51 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .scroll-nav {
+      position: fixed;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 14px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      z-index: 10;
+    }
+
+    .scroll-nav a {
+      color: #c0392b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .scroll-nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .scroll-nav {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        flex-direction: row;
+        right: auto;
+        top: auto;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .scroll-nav a {
+        background: rgba(192, 57, 43, 0.1);
+        border-radius: 10px;
+        padding: 8px 12px;
+      }
+    }
   </style>
 </head>
 
@@ -152,18 +197,24 @@
   <img src="https://i.pinimg.com/1200x/7b/38/0c/7b380c58d8af0fb64afa4c868f585688.jpg" alt="Bride" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 </header>
 
-<section>
+<nav class="scroll-nav">
+  <a href="#invitation">Invitation</a>
+  <a href="#details">Details</a>
+  <a href="#countdown">Countdown</a>
+</nav>
+
+<section id="invitation">
   <h2>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
   <p>Tuan/Puan dijemput untuk menghadiri majlis perkahwinan Mohd Israfil Redzuan bin Mohd Rizal & Nurul Shafiqah binti Haniff yang berlangsung pada 30 August 2026 bertempat di Dewan Wisma Pertanian dan 31 August 2026 bertempat di Kota Belud.</p>
 </section>
 
-<section class="details">
+<section id="details" class="details">
   <h2>Wedding Details</h2>
-  <h3>Majlis Akad Nikah dan Walimatul Urus</h3>
+  <h3>Majlis Akad Nikah dan Walimatul Urus (Majlis Sanding di tempat Pihak Perempuan)</h3>
   <p><strong>Date:</strong> 30 August 2026</p>
   <p><strong>Time:</strong> 11:00 pagi</p>
   <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@5.9568759,116.080461,17z" target="_blank">Dewan Wisma Pertanian</a></p>
-  <h3>Majlis Sanding</h3>
+  <h3>Majlis Sanding (Pihak Lelaki)</h3>
   <p><strong>Date:</strong> 31 August 2026</p>
   <p><strong>Time:</strong> 11:00 pagi</p>
   <p><strong>Venue:</strong> <a href="https://www.google.com/maps/@6.3552406,116.4310738,10z" target="_blank">Kota Belud</a></p>
